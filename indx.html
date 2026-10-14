@@ -1,0 +1,54 @@
+<section class="card">
+  <h2>⏰ Medicine Reminder</h2>
+
+  <label for="medicine">Medicine Name</label>
+  <input id="medicine" placeholder="Enter medicine name" required>
+
+  <label for="dose">Dose / مقدار</label>
+  <input id="dose" placeholder="e.g. 1 tablet, 5 ml" required>
+
+  <label for="frequency">Frequency / روزانہ کتنی بار</label>
+  <select id="frequency">
+    <option value="1">Once daily</option>
+    <option value="2">Twice daily</option>
+    <option value="3">Three times daily</option>
+    <option value="4">Four times daily</option>
+  </select>
+
+  <label for="time">Reminder Time</label>
+  <input id="time" type="time" required>
+
+  <label for="startDate">Start Date</label>
+  <input id="startDate" type="date" required>
+
+  <label for="endDate">End Date</label>
+  <input id="endDate" type="date" required>
+
+  <label for="photo">Medicine Photo (optional)</label>
+  <input id="photo" type="file" accept="image/*">
+  <img id="photoPreview" alt="Medicine preview" hidden>
+
+  <button id="addAlarm" type="button">Add Reminder</button>
+  <p id="message" role="status"></p>
+  <!-- Voice Command -->
+<div class="voice-box">
+  <h3>🎙️ Voice Command / آواز سے کنٹرول</h3>
+
+  <button id="voiceBtn" type="button">
+    🎤 Start Voice Command
+  </button>
+
+  <p id="voiceStatus" role="status" aria-live="polite">
+    Press the microphone and speak.
+  </p>
+</div>
+</section>
+
+<section class="card">
+  <h2>💊 Dose History</h2>
+  <div id="doseHistory">
+    No dose records yet.
+  </div>
+</section>
+<link rel="stylesheet" href="style.css">
+<script src="script.js"></script>

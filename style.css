@@ -1,0 +1,249 @@
+/* MediSaathi - style.css */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --primary: #087f8c;
+    --primary-dark: #06636d;
+    --background: #f1f7f9;
+    --white: #ffffff;
+    --text: #263238;
+    --muted: #68777d;
+    --border: #dce6e9;
+    --success: #198754;
+    --danger: #dc3545;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: var(--background);
+    color: var(--text);
+    line-height: 1.6;
+    padding: 20px;
+}
+
+header,
+main,
+.container,
+#reminderList,
+#doseHistory {
+    width: 100%;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card {
+    max-width: 800px;
+    margin: 0 auto 22px;
+    padding: 24px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    box-shadow: 0 7px 22px rgba(18, 72, 82, 0.08);
+}
+
+h1,
+h2,
+h3 {
+    color: var(--primary-dark);
+    margin-bottom: 14px;
+}
+
+label {
+    display: block;
+    margin: 14px 0 6px;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd9de;
+    border-radius: 9px;
+    background: var(--white);
+    color: var(--text);
+    font-family: inherit;
+    font-size: 15px;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(8, 127, 140, 0.12);
+}
+
+input[type="file"] {
+    background: #f9fcfd;
+}
+
+button {
+    padding: 11px 16px;
+    margin: 10px 6px 0 0;
+    border: none;
+    border-radius: 9px;
+    background: var(--primary);
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+button:hover {
+    background: var(--primary-dark);
+}
+
+button:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+}
+
+#addAlarm {
+    width: 100%;
+    margin-top: 22px;
+    padding: 14px;
+    font-size: 16px;
+}
+
+#message {
+    margin-top: 12px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+#photoPreview {
+    display: block;
+    max-width: 180px;
+    max-height: 180px;
+    object-fit: contain;
+    margin-top: 12px;
+    border-radius: 10px;
+}
+
+.reminder-item {
+    margin: 14px 0;
+    padding: 16px;
+    border: 1px solid var(--border);
+    border-left: 5px solid var(--primary);
+    border-radius: 12px;
+    background: #fbfefe;
+    overflow-wrap: anywhere;
+}
+
+.reminder-item h3 {
+    margin-bottom: 8px;
+}
+
+.reminder-item p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.reminder-item img {
+    display: block;
+    max-width: 120px;
+    max-height: 120px;
+    margin-top: 10px;
+    border-radius: 8px;
+    object-fit: contain;
+}
+
+.taken-button {
+    background: var(--success);
+}
+
+.taken-button:hover {
+    background: #146c43;
+}
+
+.missed-button {
+    background: var(--danger);
+}
+
+.missed-button:hover {
+    background: #b02a37;
+}
+
+.history-item {
+    margin: 10px 0;
+    padding: 12px;
+    background: #f5f9fa;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font-size: 14px;
+    overflow-wrap: anywhere;
+}
+
+.status-taken {
+    color: var(--success);
+    font-weight: 700;
+}
+
+.status-missed {
+    color: var(--danger);
+    font-weight: 700;
+}
+
+.empty-message {
+    color: var(--muted);
+    padding: 10px 0;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 12px;
+    }
+
+    .card {
+        padding: 17px;
+        border-radius: 12px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    input,
+    select {
+        font-size: 16px;
+    }
+
+    .reminder-item {
+        padding: 12px;
+    }
+}
+.voice-box {
+  margin: 15px 0;
+  padding: 15px;
+  border-radius: 12px;
+  background: #eef7ff;
+  text-align: center;
+}
+
+#voiceBtn {
+  background: #087f8c;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 18px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#voiceBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+#voiceStatus {
+  margin-top: 10px;
+  font-size: 14px;
+  overflow-wrap: anywhere;
+}
